@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <form method="post" enctype="multipart/form-data">
+        <h1>Create a new item</h1>
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="Create">
+    </form>
+    <a href="/AdminUser"><button id="items">Back</button></a>
+</body>
+</html>

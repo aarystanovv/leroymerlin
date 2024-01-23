@@ -1,0 +1,34 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="../../static/app/UU.css" rel="stylesheet">
+</head>
+<body>
+    <div class="main">
+        <div class="grid-container">
+            <div id="item1">Username</div>
+            <div id="item4">Email</div>
+            <div id="item2">Last name</div>
+            <div id="item3">First name</div>
+            <div id="item5">Edit</div>
+
+            {% for data in allForUsers %}
+                <div class="item1"><span class="curs">{{ data.username }}</span></div>
+                <div class="item4"><span class="curs">{{ data.email }}</span></div>
+                <div class="item2"><span class="curs">{{ data.last_name }}</span></div>
+                <div class="item3"><span class="curs">{{ data.first_name }}</span></div>
+                <div class="item3"><span class="curs"><a href="{% url 'updateOnlyUser' data.pk %}">Delete</a></span></div>
+
+            {% endfor %}
+        </div>
+
+        <div class="items">
+            <a href="/AdminUser"><button id="items">Back</button></a>
+        </div>
+
+    </div>
+</body>
+</html>

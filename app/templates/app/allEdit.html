@@ -1,0 +1,36 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="../../static/app/allEdit.css" rel="stylesheet">
+</head>
+<body>
+    <div class="main">
+        <div class="grid-container">
+            <div id="item1"> Name</div>
+            <div id="item2">Photo</div>
+            <div id="item3">Price ₸</div>
+            <div id="item4">From</div>
+            <div id="item5">Edit</div>
+            {% for data in allForClientsItems %}
+                <div class="item1"><span class="curs">{{ data.name }}</span></div>
+                <div class="item2"><img id="img" src="{{ data.image_field.url }}"></div>
+                <div class="item3"><span class="curs">{{ data.price }}</span></div>
+                <div class="item4"><span class="curs">{{ data.country }}</span></div>
+                <div class="item5"><span class="curs">
+                    <a href="{% url 'updateItems' data.pk %}">Update</a><br>
+                    <a href="{% url 'deleteItems' data.pk %}">Delete</a></span>
+                </div>
+
+            {% endfor %}
+        </div>
+
+        <div class="items">
+            <a href="/AdminUser"><button id="items">Back</button></a>
+        </div>
+
+    </div>
+</body>
+</html>

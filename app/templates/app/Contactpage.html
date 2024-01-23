@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact Form PAGE</title>
+</head>
+<body>
+    <center>
+        <h1>Send Email (gmail)</h1>
+        <hr>
+        <form method="POST">
+            {% csrf_token %}
+        <table border="1">
+            {{form}}
+        </table>
+        <input type="submit" value="Send">
+        </form>
+    </center>
+</body>
+</html>

@@ -1,0 +1,50 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="../../static/app/forCl.css" rel="stylesheet">
+
+</head>
+<body>
+    <form action="{% url 'item_list' %}" method="get">
+        <input type="text" name="q" value="{{ query }}">
+        <button type="submit">Search</button>
+        <button type="submit" name="sort" value="asc">Sort by Price Ascending</button>
+        <button type="submit" name="sort" value="desc">Sort by Price Descending</button>
+    </form>
+
+    <div class="main">
+        <div class="grid-container">
+            <div id="item1">Name</div>
+            <div id="item2">Photo</div>
+            <div id="item3">Price ₸</div>
+            <div id="item4">From</div>
+        {% if items is empty %}
+             {% for data in allForClientsItems %}
+                <div class="item1"><span class="curs">{{ data.name }}</span></div>
+                <div class="item2"><img id="img" src="{{ data.image_field.url }}"></div>
+                <div class="item3"><span class="curs">{{ data.price }}</span></div>
+                <div class="item4"><span class="curs">{{ data.country }}</span></div>
+            {% endfor %}
+        {% else %}
+            {% for data in items %}
+                <div class="item1"><span class="curs">{{ data.name }}</span></div>
+                <div class="item2"><img id="img" src="{{ data.image_field.url }}"></div>
+                <div class="item3"><span class="curs">{{ data.price }}</span></div>
+                <div class="item4"><span class="curs">{{ data.country }}</span></div>
+            {% endfor %}
+        {% endif %}
+        </div>
+
+        <div class="items">
+            <a href="{% url 'home' %}"><button id="items">Back</button></a>
+            <br><br>
+            <a href="/item_list"><button id="items">Filter</button></a>
+
+        </div>
+
+    </div>
+</body>
+</html>

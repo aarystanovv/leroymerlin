@@ -1,0 +1,33 @@
+body{
+    background-image: url("https://img.freepik.com/free-vector/beautiful-white-background-with-golden-lines-shapes_1017-27145.jpg");
+    width: 1500px;
+}
+body > a > button{
+    margin-left: 610px;
+    width: 200px;
+    height: 40px;
+    border-radius: 10px;
+    border-color: transparent;
+    margin-bottom: 5px;
+    background-color: limegreen;
+    box-shadow: 0 3px rgba(58, 87, 175, .75);
+    font-family: "Roboto", "Lucida Grande", "DejaVu Sans", "Bitstream Vera Sans", Verdana, Arial, sans-serif;
+    color: darkblue;
+    font-size: 16px;
+
+}
+
+
+h1{
+    font-size: 50px;
+    margin-left: 400px;
+    margin-top: 200px;
+    color: #8b7f00;
+    font-family: "Roboto", "Lucida Grande", "DejaVu Sans", "Bitstream Vera Sans", Verdana, Arial, sans-serif;
+}
+h2{
+    font-family: "Roboto", "Lucida Grande", "DejaVu Sans", "Bitstream Vera Sans", Verdana, Arial, sans-serif;
+    margin-left: 610px;
+    font-size: 40px;
+    color: #9a8c08;
+}

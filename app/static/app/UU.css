@@ -1,0 +1,67 @@
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto;
+  grid-gap: 10px;
+  background-color: #000000;
+  padding: 10px;
+}
+
+.grid-container > div {
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  padding: 20px 0;
+  font-size: 15px;
+
+}
+.curs{
+    font-size: 15px;
+    font-family: "Calibri", serif;
+    font-weight: bold;
+    color: darkslategrey;
+}
+#item1{
+    font-size: 30px;
+    color: #000000;
+    font-family: "Calibri", serif;
+}
+#item2{
+    font-size: 30px;
+    color: #000000;
+    font-family: "Calibri", serif;
+}
+#item3{
+    font-family: "Calibri", serif;
+    font-size: 30px;
+    color: #000000;
+}#item4{
+    font-family: "Calibri", serif;
+    font-size: 30px;
+    color: #000000;
+}
+ #item5{
+    font-family: "Calibri", serif;
+    font-size: 30px;
+    color: #000000;
+}
+
+.items{
+    width: 20px;
+    margin: 50px auto auto;
+    padding-bottom: 50px;
+}
+#items{
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    font-size: 10px;
+    color: #000000;
+    background-color: #a40000;
+    border-color: transparent;
+    font-family: Calibri, serif;
+}
+
+
+
+
+
+

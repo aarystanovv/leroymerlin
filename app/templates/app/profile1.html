@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% block content %}
+ <p>
+     Username: {{ request.user.username }} <br>
+     Name: {{ request.user.first_name }} {{ request.user.last_name}}<br>
+     Date Joined: {{ request.user.date_joined }} <br>
+     Email: {{ request.user.email }}<br>
+     Last Login: {{ request.user.last_login }}<br>
+     <a href="{% url 'home' %}">Back</a>
+     <a href="{% url 'edit' request.user.pk %}">Edit</a>
+ </p>
+{% endblock %}
+</body>
+</html>

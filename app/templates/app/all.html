@@ -1,0 +1,32 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="../../static/app/forCl.css" rel="stylesheet">
+</head>
+<body>
+    <div class="main">
+        <div class="grid-container">
+            <div id="item1"> Name</div>
+            <div id="item2">Photo</div>
+            <div id="item3">Price ₸</div>
+            <div id="item4">From</div>
+            {% for data in allForClientsItems %}
+                <div class="item1"><span class="curs">{{ data.name }}</span></div>
+                <div class="item2"><img id="img" src="{{ data.image_field.url }}"></div>
+                <div class="item3"><span class="curs">{{ data.price }}</span></div>
+                <div class="item4"><span class="curs">{{ data.country }}</span></div>
+            {% endfor %}
+        </div>
+
+        <div class="items">
+            <a href="/AdminUser"><button id="items">Back</button></a>
+            <br><br>
+            <a href="/item_list"><button id="items">Filter</button></a>
+        </div>
+
+    </div>
+</body>
+</html>

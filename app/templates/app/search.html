@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Searching for: {{ name  }}</h1>
+<ul>
+    {% for s in data %}
+        <li>{{ s.name }}</li>
+        <li>{{ s.price }}</li>
+        <li>{{ s.country }}</li>
+        <li><a href="{% url 'detail' s.id %}">Info</a></li>
+        <br>
+
+    {% endfor %}
+<a href="{% url 'home' %}">Back</a>
+</ul>
+</body>
+</html>
